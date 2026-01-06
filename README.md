@@ -10,6 +10,13 @@ If you don't plan to publish to PyPI, you can remove them.*
 
 Sudoku_Validation is a project that (describe what it does here).
 
+## Contributors
+
+Justin Mak: justinmak08@gmail.com
+Eric Yang: eric99yang@gmail.com
+Kin Chung Choy: kcchoyaa@connect.ust.hk
+Omowunmi Obadero: obaderoomowunmi@gmail.com
+
 ## Get started
 
 You can install this package into your preferred Python environment using pip:
