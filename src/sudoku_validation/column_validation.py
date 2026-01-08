@@ -16,6 +16,11 @@ def column_validation(board: list[list[int]]) -> bool:
     bool
         True if all columns are valid (no duplicate digits 1-9), False otherwise.
 
+    Raises
+    ------
+    ValueError
+        If the board is not a 9x9 grid or if any of the cells contain a value outside the range 1-9.
+
     Examples
     --------
     >>> board = [
