@@ -40,7 +40,7 @@ def sudoku_validation(board: list[list[int]]) -> bool:
     ...     [0, 0, 0, 4, 1, 9, 0, 0, 5],
     ...     [0, 0, 0, 0, 8, 0, 0, 7, 9]
     ... ]
-    >>> combined_validation(board)
+    >>> sudoku_validation(board)
     False
 
     >>> solved_board = [
@@ -54,7 +54,7 @@ def sudoku_validation(board: list[list[int]]) -> bool:
     ...     [2, 8, 7, 4, 1, 9, 6, 3, 5],
     ...     [3, 4, 5, 2, 8, 6, 1, 7, 9]
     ... ]
-    >>> combined_validation(solved_board)
+    >>> sudoku_validation(solved_board)
     True
     """
     pass
