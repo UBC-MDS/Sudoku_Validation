@@ -7,6 +7,13 @@ def sudoku_validation(board: list[list[int]]) -> bool:
     contain unique digits from 1 to 9, ignoring placeholder values
     (e.g., 0 or None) for incomplete cells. It combines the checks
     from row_validation, column_validation and square_validation.
+
+    Parameters
+    ----------
+    board : list of list of int
+        A 9x9 grid representing a Sudoku board. Each cell should contain
+        an integer from 1-9.
+
     """
     pass
 
