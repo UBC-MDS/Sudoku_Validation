@@ -7,7 +7,7 @@
 
 Sudoku_Validation is a project that validates a standard 9 x 9 Sudoku board. It has the ability to validate rows only, columns only, 3x3 squares only, or the entire 9 x 9 board. 
 
-This package contains four methods:
+This package contains five methods:
 - `combined_validation()`: validates a 9 x 9 Sudoku board is a valid solution
 - `array_validation()`: validates whether any array is a valid 9-integer Sudoku solution with unique integers from 1-9
 - `column_validation()`: validates whether the columns of a 9 x 9 Sudoku board is a valid solution
