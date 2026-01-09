@@ -8,7 +8,17 @@
 *TODO: the above badges that indicate python version and package version will only work if your package is on PyPI.
 If you don't plan to publish to PyPI, you can remove them.*
 
-Sudoku_Validation is a project that (describe what it does here).
+Sudoku_Validation is a project that validates a standard 9 x 9 Sudoku board. It has the ability to validate rows only, columns only, 3x3 squares only, or the entire 9 x 9 board. 
+
+This packages contains four methods:
+- `array_validation()`: validates whether any array is a valid 9-integer Sudoku solution with unique integers from 1-9
+- `column_validation()`: validates whether the columns of a 9 x 9 Sudoku board is a valid solution
+- `row_validation()`: validates whether the rows of a 9 x 9 Sudoku board is a valid solution
+- `square_validation()`: validates whether the nine 3 x 3 squares of a 9 x 9 Sudoku board is a valid solution
+
+There are other Python packages that provide similar functionality. Here are some examples: 
+- `sudoku_py`: https://github.com/aurbano/sudoku_py
+- `CodeWars-Python`: https://github.com/Peter-Liang/CodeWars-Python/blob/master/solutions/Validate_Sudoku_with_size_NxN.py
 
 ## Contributors
 
