@@ -17,7 +17,10 @@ version = "0.1.0"
 
 description = "Validate sudoku puzzle"
 authors = [
-    { name = "Justin Mak, Eric Yang, Kin Chung Choy, Omowunmi Obadero", email = "justinmak08@gmail.com, eric99yang@gmail.com, kcchoyaa@connect.ust.hk, obaderoomowunmi@gmail.com" },
+    { name = "Justin Mak", email = "justinmak08@gmail.com" },
+    { name = "Eric Yang", email = "eric99yang@gmail.com" },
+    { name = "Kin Chung Choy", email = "kcchoyaa@connect.ust.hk" },
+    { name = "Omowunmi Obadero", email = "obaderoomowunmi@gmail.com" },
 ]
 license = "MIT"
 requires-python = ">= 3.10" # Adjust based on the minimum version of Python that you support
