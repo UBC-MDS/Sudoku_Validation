@@ -52,4 +52,37 @@ def column_validation(board: list[list[int]]) -> bool:
     True
 
     """
-    pass
+    from sudoku_validation.array_validation import array_validation
+    
+    # validate the board is a 9x9 grid
+    if len(board) != 9:
+        raise ValueError("Board must be a 9x9 grid")
+    
+    for row in board:
+        if len(row) != 9:
+            raise ValueError("Board must be a 9x9 grid")
+    
+    # validate the board contains only integers from 1 to 9
+    for row in board:
+        for cell in row:
+            if not isinstance(cell, int) or cell < 1 or cell > 9:
+                raise ValueError("Board must contain only integers from 1 to 9")
+
+    # get arrays of the columns
+    columns = [[] for _ in range(9)]
+    for row in board:
+        for i in range(9):
+            columns[i].append(row[i])
+
+    # validate the columns contain only unique integers from 1 to 9
+    for column in columns:
+        if len(set(column)) != 9:
+            return False
+
+    # validate the columns are a valid sudoku solution
+    for column in columns:
+        if not array_validation(column):
+            return False
+
+    # return True if all tests pass
+    return True
