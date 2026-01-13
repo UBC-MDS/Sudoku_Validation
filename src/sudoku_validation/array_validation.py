@@ -13,8 +13,7 @@ def array_validation(unit):
 
     This function checks whether the provided array corresponds to a valid
     Sudoku unit (row, column, or 3x3 square). A valid unit must contain
-    unique integers from 1 to 9, ignoring placeholder values used for
-    incomplete boards.
+    unique integers from 1 to 9.
 
     This function serves as the core validation logic for all Sudoku unit
     checks. Higher-level validation functions (e.g., row, column, square)
@@ -25,8 +24,7 @@ def array_validation(unit):
     ----------
     unit : array-like of shape (9,)
         A one-dimensional array representing a Sudoku unit. The array
-        must contain numeric values. Placeholder values such as 0 or None
-        may be used to represent empty cells.
+        must contain numeric values.
 
     Returns
     -------
@@ -44,15 +42,30 @@ def array_validation(unit):
     -----
     - A valid Sudoku unit contains no duplicate values among the digits
       1 through 9.
-    - Placeholder values (e.g., 0 or None) are ignored when checking
-      for duplicates.
     - This function does not modify the input array.
 
     Examples
     --------
-    >>> validate_array_unit([5, 3, 4, 6, 7, 8, 9, 1, 2])
+    >>> array_validation([5, 3, 4, 6, 7, 8, 9, 1, 2])
     True
 
-    >>> validate_array_unit([5, 3, 0, 6, 7, 8, 9, 1, 5])
+    >>> array_validation([5, 3, 0, 6, 7, 8, 9, 1, 5])
     False
     """
+    # Basic input validation
+    if not isinstance(unit, list):
+        raise TypeError("Input array must not be a list.")
+    if len(unit) != 9:
+        raise ValueError("Input array must be of length 9.")
+    if not all(isinstance(x, int) for x in unit):
+        raise ValueError("All elements must be integers.")
+    if not all(1 <= x <= 9 for x in unit):
+        raise ValueError("Elements must be in the range 1-9.")
+
+    # Return False if sum exceeds expected sum
+    seen = set()
+    for number in unit:
+        if number in seen:
+            return False
+        seen.add(number)
+    return True
