@@ -5,9 +5,10 @@ Test the column_validation function.
 import pytest
 from sudoku_validation.column_validation import column_validation
 
-def test_column_validation():
+
+def test_column_validation_valid_board_example():
     """
-    Test the column_validation function.
+    Test column_validation with a valid board (example 1).
     """
     board_example = [
         [3, 2, 6, 9, 7, 4, 8, 1, 5],
@@ -22,6 +23,11 @@ def test_column_validation():
     ]
     assert column_validation(board_example) == True
 
+
+def test_column_validation_valid_board_example_1():
+    """
+    Test column_validation with a valid board (example 2).
+    """
     board_example_1 = [
         [5, 3, 4, 6, 7, 8, 9, 1, 2],
         [6, 7, 2, 1, 9, 5, 3, 4, 8],
@@ -35,6 +41,11 @@ def test_column_validation():
     ]
     assert column_validation(board_example_1) == True
 
+
+def test_column_validation_valid_board_example_2():
+    """
+    Test column_validation with a valid board (example 3).
+    """
     board_example_2 = [
         [1, 2, 3, 4, 5, 6, 7, 8, 9],
         [4, 5, 6, 7, 8, 9, 1, 2, 3],
@@ -46,8 +57,13 @@ def test_column_validation():
         [6, 7, 8, 9, 1, 2, 3, 4, 5],
         [9, 1, 2, 3, 4, 5, 6, 7, 8]
     ]
-    assert column_validation(board_example_2) == True 
+    assert column_validation(board_example_2) == True
 
+
+def test_column_validation_valid_board_example_3():
+    """
+    Test column_validation with a valid board (example 4).
+    """
     board_example_3 = [
         [8, 1, 2, 7, 5, 3, 6, 4, 9],
         [9, 4, 3, 6, 8, 2, 1, 7, 5],
@@ -61,6 +77,11 @@ def test_column_validation():
     ]
     assert column_validation(board_example_3) == True
 
+
+def test_column_validation_valid_board_example_4():
+    """
+    Test column_validation with a valid board (example 5).
+    """
     board_example_4 = [
         [2, 4, 6, 8, 1, 3, 5, 7, 9],
         [1, 3, 5, 7, 9, 2, 4, 6, 8],
@@ -74,6 +95,11 @@ def test_column_validation():
     ]
     assert column_validation(board_example_4) == True
 
+
+def test_column_validation_valid_board_example_5():
+    """
+    Test column_validation with a valid board (example 6).
+    """
     board_example_5 = [
         [9, 6, 3, 1, 7, 4, 2, 5, 8],
         [1, 7, 8, 3, 2, 5, 6, 4, 9],
@@ -87,6 +113,11 @@ def test_column_validation():
     ]
     assert column_validation(board_example_5) == True
 
+
+def test_column_validation_valid_board_example_6():
+    """
+    Test column_validation with a valid board (example 7).
+    """
     board_example_6 = [
         [3, 2, 6, 9, 7, 4, 8, 1, 5],
         [8, 1, 9, 3, 5, 6, 4, 7, 2],
@@ -100,7 +131,11 @@ def test_column_validation():
     ]
     assert column_validation(board_example_6) == True
 
-    # Test with board that has wrong number of rows (only 7 rows)
+
+def test_column_validation_invalid_board_wrong_rows():
+    """
+    Test column_validation with board that has wrong number of rows (only 7 rows).
+    """
     invalid_board_wrong_rows = [
         [1, 2, 3, 4, 5, 6, 7, 8, 9],
         [4, 5, 6, 7, 8, 9, 1, 2, 3],
@@ -113,7 +148,11 @@ def test_column_validation():
     with pytest.raises(ValueError):
         column_validation(invalid_board_wrong_rows)
 
-    # Test with board containing invalid value (0 is outside 1-9 range)
+
+def test_column_validation_invalid_board_invalid_value_zero():
+    """
+    Test column_validation with board containing invalid value (0 is outside 1-9 range).
+    """
     invalid_board_invalid_value = [
         [0, 2, 3, 4, 5, 6, 7, 8, 9],
         [4, 5, 6, 7, 8, 9, 1, 2, 3],
@@ -128,6 +167,11 @@ def test_column_validation():
     with pytest.raises(ValueError):
         column_validation(invalid_board_invalid_value)
 
+
+def test_column_validation_invalid_board_invalid_value_ten():
+    """
+    Test column_validation with board containing invalid value (10 is outside 1-9 range).
+    """
     invalid_board_invalid_value_2 = [
         [1, 2, 3, 4, 5, 6, 7, 8, 10],
         [4, 5, 6, 7, 8, 9, 1, 2, 3],
@@ -142,7 +186,11 @@ def test_column_validation():
     with pytest.raises(ValueError):
         column_validation(invalid_board_invalid_value_2)
 
-    # Test with board containing negative values
+
+def test_column_validation_invalid_board_negative_values():
+    """
+    Test column_validation with board containing negative values.
+    """
     invalid_board_negative_values = [
         [-1, 2, 3, 4, 5, 6, 7, 8, 9],
         [4, 5, 6, 7, 8, 9, 1, 2, 3],
@@ -157,7 +205,11 @@ def test_column_validation():
     with pytest.raises(ValueError):
         column_validation(invalid_board_negative_values)
 
-    # Test with board containing duplicate values
+
+def test_column_validation_invalid_board_duplicate_values():
+    """
+    Test column_validation with board containing duplicate values.
+    """
     invalid_board_duplicate_values = [
         [1, 2, 3, 4, 4, 6, 7, 8, 9],
         [1, 5, 6, 7, 8, 9, 1, 2, 3],
