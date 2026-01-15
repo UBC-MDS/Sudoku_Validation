@@ -54,35 +54,29 @@ def column_validation(board: list[list[int]]) -> bool:
     """
     from sudoku_validation.array_validation import array_validation
     
-    # validate the board is a 9x9 grid
-    if len(board) != 9:
-        raise ValueError("Board must be a 9x9 grid")
-    
-    for row in board:
-        if len(row) != 9:
-            raise ValueError("Board must be a 9x9 grid")
-    
-    # validate the board contains only integers from 1 to 9
-    for row in board:
-        for cell in row:
-            if not isinstance(cell, int) or cell < 1 or cell > 9:
-                raise ValueError("Board must contain only integers from 1 to 9")
+    # board = [
+    #     [3, 2, 6, 9, 7, 4, 8, 1, 5],
+    #     [8, 1, 9, 3, 5, 6, 4, 7, 2],
+    #     [5, 4, 7, 2, 1, 8, 9, 6, 3],
+    #     [9, 5, 2, 7, 3, 1, 6, 4, 8],
+    #     [1, 3, 4, 6, 8, 9, 5, 2, 7],
+    #     [6, 7, 8, 4, 2, 5, 1, 3, 9],
+    #     [7, 6, 1, 8, 9, 3, 2, 5, 4],
+    #     [2, 9, 5, 1, 4, 7, 3, 8, 6],
+    #     [4, 8, 3, 5, 6, 2, 7, 9, 1]
+    # ]
 
-    # get arrays of the columns
-    columns = [[] for _ in range(9)]
-    for row in board:
-        for i in range(9):
-            columns[i].append(row[i])
+    # transpose the board
+    board_transposed = list(map(list, zip(*board)))
 
-    # validate the columns contain only unique integers from 1 to 9
-    for column in columns:
-        if len(set(column)) != 9:
-            return False
-
-    # validate the columns are a valid sudoku solution
-    for column in columns:
+    # validate the board has 9 columns
+    if len(board_transposed) != 9:
+        raise ValueError("Board does not have 9 columns")
+ 
+    # validate the columns are valid sudoku solutions
+    for column in board_transposed:
         if not array_validation(column):
             return False
 
-    # return True if all tests pass
+    # return True if all columns are valid sudoku solutions
     return True

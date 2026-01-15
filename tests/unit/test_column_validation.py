@@ -149,6 +149,24 @@ def test_column_validation_invalid_board_wrong_rows():
         column_validation(invalid_board_wrong_rows)
 
 
+def test_column_validation_invalid_board_wrong_columns():
+    """
+    Test column_validation with board that has wrong number of columns (only 8 columns).
+    """
+    invalid_board_wrong_columns = [
+        [0, 2, 3, 4, 5, 6, 7, 8],
+        [4, 5, 6, 7, 8, 9, 1, 2],
+        [7, 8, 9, 1, 2, 3, 4, 5],
+        [2, 3, 4, 5, 6, 7, 8, 9],
+        [5, 6, 7, 8, 9, 1, 2, 3],
+        [8, 9, 1, 2, 3, 4, 5, 6],
+        [3, 4, 5, 6, 7, 8, 9, 1],
+        [6, 7, 8, 9, 1, 2, 3, 4],
+        [9, 1, 2, 3, 4, 5, 6, 7]
+    ]
+    with pytest.raises(ValueError):
+        column_validation(invalid_board_wrong_columns)
+
 def test_column_validation_invalid_board_invalid_value_zero():
     """
     Test column_validation with board containing invalid value (0 is outside 1-9 range).
