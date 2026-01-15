@@ -52,4 +52,31 @@ def column_validation(board: list[list[int]]) -> bool:
     True
 
     """
-    pass
+    from sudoku_validation.array_validation import array_validation
+    
+    # board = [
+    #     [3, 2, 6, 9, 7, 4, 8, 1, 5],
+    #     [8, 1, 9, 3, 5, 6, 4, 7, 2],
+    #     [5, 4, 7, 2, 1, 8, 9, 6, 3],
+    #     [9, 5, 2, 7, 3, 1, 6, 4, 8],
+    #     [1, 3, 4, 6, 8, 9, 5, 2, 7],
+    #     [6, 7, 8, 4, 2, 5, 1, 3, 9],
+    #     [7, 6, 1, 8, 9, 3, 2, 5, 4],
+    #     [2, 9, 5, 1, 4, 7, 3, 8, 6],
+    #     [4, 8, 3, 5, 6, 2, 7, 9, 1]
+    # ]
+
+    # transpose the board
+    board_transposed = list(map(list, zip(*board)))
+
+    # validate the board has 9 columns
+    if len(board_transposed) != 9:
+        raise ValueError("Board does not have 9 columns")
+ 
+    # validate the columns are valid sudoku solutions
+    for column in board_transposed:
+        if not array_validation(column):
+            return False
+
+    # return True if all columns are valid sudoku solutions
+    return True
