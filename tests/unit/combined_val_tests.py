@@ -73,3 +73,20 @@ def test_invalid_number_of_columns():
         combined_validation(board)
 
 
+def test_row_duplicate_returns_false():
+    """Return False if a row contains duplicates."""
+    board = deepcopy(VALID_COMPLETE_BOARD)
+    board[0][0] = 5
+    board[0][1] = 5  
+    assert combined_validation(board) is False
+
+
+def test_column_duplicate_returns_false():
+    """Return False if a column contains duplicates."""
+    board = deepcopy(VALID_COMPLETE_BOARD)
+    board[0][0] = 7
+    board[1][0] = 7  
+    assert combined_validation(board) is False
+
+
+
