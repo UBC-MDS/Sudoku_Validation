@@ -1,3 +1,4 @@
+
 def combined_validation(board: list[list[int]]) -> bool:
     """
     Validate an entire Sudoku board.
@@ -57,7 +58,55 @@ def combined_validation(board: list[list[int]]) -> bool:
     >>> combined_validation(solved_board)
     True
     """
-    pass
+    if not isinstance(board, list):
+        raise TypeError("board must be a list of lists")
 
+    if len(board) != 9:
+        raise ValueError("board must have exactly 9 rows")
 
+    for i, row in enumerate(board):
+        if not isinstance(row, list):
+            raise TypeError(f"row {i} must be a list")
+        if len(row) != 9:
+            raise ValueError(f"row {i} must have exactly 9 columns")
+        for j, cell in enumerate(row):
+            if isinstance(cell, bool) or not isinstance(cell, int):
+                raise TypeError(f"cell ({i},{j}) must be an int")
+            if cell < 0 or cell > 9:
+                raise ValueError(f"cell ({i},{j}) must be in range 0-9")
 
+    # Check rows
+    for row in board:
+        seen = set()
+        for v in row:
+            if v == 0:
+                continue
+            if v in seen:
+                return False
+            seen.add(v)
+
+    # Check columns
+    for c in range(9):
+        seen = set()
+        for r in range(9):
+            v = board[r][c]
+            if v == 0:
+                continue
+            if v in seen:
+                return False
+            seen.add(v)
+
+    # Check 3x3 blocks
+    for br in (0, 3, 6):
+        for bc in (0, 3, 6):
+            seen = set()
+            for r in range(br, br + 3):
+                for c in range(bc, bc + 3):
+                    v = board[r][c]
+                    if v == 0:
+                        continue
+                    if v in seen:
+                        return False
+                    seen.add(v)
+
+    return True
