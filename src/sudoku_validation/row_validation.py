@@ -6,37 +6,49 @@ Sudoku board. Row validation is performed by extracting a single row from
 the board and delegating Sudoku rule checks to the generic array validation
 functions.
 """
-def validate_row(board, row_index):
-    """
-    Validate a single row of a Sudoku board.
 
-    This function extracts the specified row from a Sudoku board and
-    validates it according to Sudoku rules by using the 
-    array_validation function.
+from sudoku_validation.array_validation import array_validation
+
+def row_validation(board):
+    """
+    Validate all rows of a Sudoku board.
+
+    This function iterates through every row in the provided board and
+    validates it according to Sudoku rules by delegating to the 
+    validate_array_unit function.
 
     Parameters
     ----------
-    board : array-like of shape (9, 9)
-        A two-dimensional array representing a Sudoku board.
-        Values may include integers from 1 to 9 and placeholder values
-        (0 or None) for empty cells.
-    row_index : int
-        The index of the row to validate. Rows are zero-indexed.
+    board : list of lists
+        A two-dimensional list representing a 9x9 Sudoku board.
+        Must contain integers from 1 to 9.
 
     Returns
     -------
     bool
-        True if the specified row is valid according to Sudoku rules;
-        False otherwise.
+        True if ALL rows are valid Sudoku units (no duplicates).
+        False if ANY row contains duplicate values.
 
     Raises
     ------
     ValueError
-        If the board is not a 9x9 array or if row_index is out of bounds.
-
-    Notes
-    -----
-    This function does not implement Sudoku validation logic directly.
-    It extracts the target row and delegates validation to
-    the array_validation function.
+        If the board is not a list, is not of length 9, contains
+        rows of invalid length, or contains non-integer values/placeholders.
     """
+    # Basic board validation
+    if not isinstance(board, list) or len(board) != 9:
+        raise ValueError("Board must be a 9x9 list of lists.")
+
+    # 2. Iterate and Validate
+    for i, row in enumerate(board):
+        # Passing the rest of the validation to array_validation.
+        # It raises ValueError if the row has bad types/lengths/ranges.
+        # It returns False if the row has duplicates.
+        try:
+            is_valid = array_validation(row)
+        except ValueError as e:
+            raise ValueError(f"Invalid row at index {i}: {str(e)}") from e
+        if not is_valid:
+            return False
+
+    return True
