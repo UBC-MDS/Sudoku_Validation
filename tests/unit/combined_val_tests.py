@@ -37,3 +37,25 @@ VALID_INCOMPLETE_BOARD = [
 ]
 
 
+def test_input_not_list():
+    """Raise TypeError if input is not a list."""
+    with pytest.raises(TypeError):
+        combined_validation("not a list")
+
+
+def test_row_not_list():
+    """Raise TypeError if any row is not a list."""
+    board = deepcopy(VALID_COMPLETE_BOARD)
+    board[0] = "not a list"
+    with pytest.raises(TypeError):
+        combined_validation(board)
+
+
+def test_cell_not_int():
+    """Raise TypeError if any cell is not an integer."""
+    board = deepcopy(VALID_COMPLETE_BOARD)
+    board[0][0] = "5"
+    with pytest.raises(TypeError):
+        combined_validation(board)
+
+
