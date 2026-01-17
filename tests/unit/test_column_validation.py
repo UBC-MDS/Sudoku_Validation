@@ -6,7 +6,7 @@ import pytest
 from sudoku_validation.column_validation import column_validation
 
 
-def test_column_validation_valid_board_example():
+def test_column_validation_valid_board_example_1():
     """
     Test column_validation with a valid board (example 1).
     """
@@ -24,7 +24,7 @@ def test_column_validation_valid_board_example():
     assert column_validation(board_example) == True
 
 
-def test_column_validation_valid_board_example_1():
+def test_column_validation_valid_board_example_2():
     """
     Test column_validation with a valid board (example 2).
     """
@@ -60,7 +60,7 @@ def test_column_validation_valid_board_example_2():
     assert column_validation(board_example_2) == True
 
 
-def test_column_validation_valid_board_example_3():
+def test_column_validation_valid_board_example_4():
     """
     Test column_validation with a valid board (example 4).
     """
@@ -78,7 +78,7 @@ def test_column_validation_valid_board_example_3():
     assert column_validation(board_example_3) == True
 
 
-def test_column_validation_valid_board_example_4():
+def test_column_validation_valid_board_example_5():
     """
     Test column_validation with a valid board (example 5).
     """
@@ -96,9 +96,9 @@ def test_column_validation_valid_board_example_4():
     assert column_validation(board_example_4) == True
 
 
-def test_column_validation_valid_board_example_5():
+def test_column_validation_invalid_board_example_6():
     """
-    Test column_validation with a valid board (example 6).
+    Test column_validation with a invalid board (example 6).
     """
     board_example_5 = [
         [9, 6, 3, 1, 7, 4, 2, 5, 8],
@@ -111,10 +111,10 @@ def test_column_validation_valid_board_example_5():
         [3, 1, 7, 2, 4, 6, 8, 9, 5],
         [6, 4, 2, 5, 9, 8, 1, 7, 3]
     ]
-    assert column_validation(board_example_5) == True
+    assert column_validation(board_example_5) == False
 
 
-def test_column_validation_valid_board_example_6():
+def test_column_validation_valid_board_example_7():
     """
     Test column_validation with a valid board (example 7).
     """
