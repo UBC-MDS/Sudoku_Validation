@@ -89,4 +89,11 @@ def test_column_duplicate_returns_false():
     assert combined_validation(board) is False
 
 
+def test_block_duplicate_returns_false():
+    """Return False if a 3x3 block contains duplicates."""
+    board = deepcopy(VALID_COMPLETE_BOARD)
+    board[0][0] = 9
+    board[1][1] = 9  
+    assert combined_validation(board) is False
+
 
