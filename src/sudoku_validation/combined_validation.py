@@ -96,4 +96,17 @@ def combined_validation(board: list[list[int]]) -> bool:
                 return False
             seen.add(v)
 
-  
+    # Check 3x3 blocks
+    for br in (0, 3, 6):
+        for bc in (0, 3, 6):
+            seen = set()
+            for r in range(br, br + 3):
+                for c in range(bc, bc + 3):
+                    v = board[r][c]
+                    if v == 0:
+                        continue
+                    if v in seen:
+                        return False
+                    seen.add(v)
+
+    return True
