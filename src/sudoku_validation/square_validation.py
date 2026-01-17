@@ -4,7 +4,7 @@ Square-level validation utilities for Sudoku boards.
 This module provides functionality for validating individual rows of a Sudoku board. Square validation is performed by extracting a valid square from the board and delegating Sudoku rule checks to the generic array validation functions.
 """
 
-from array_validation import array_validation
+from sudoku_validation.array_validation import array_validation
 
 def square_validation(board: list[list[int]]) -> bool:
     """
@@ -55,6 +55,12 @@ def square_validation(board: list[list[int]]) -> bool:
     >>> square_validation(board)
     True
     """
+    if len(board) != 9:
+        raise ValueError("Board must have exactly 9 rows")
+    
+    for i, row in enumerate(board):
+        if len(row) != 9:
+            raise ValueError(f"Row {i} must have exactly 9 columns")
 
     # Iterate and Validate 3×3 Squares
     for square_index in range(9):
