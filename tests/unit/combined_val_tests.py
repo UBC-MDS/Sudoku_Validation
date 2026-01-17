@@ -59,3 +59,17 @@ def test_cell_not_int():
         combined_validation(board)
 
 
+def test_invalid_number_of_rows():
+    """Raise ValueError if board does not have 9 rows."""
+    board = deepcopy(VALID_COMPLETE_BOARD[:8])
+    with pytest.raises(ValueError):
+        combined_validation(board)
+
+
+def test_invalid_number_of_columns():
+    """Raise ValueError if any row does not have 9 columns."""
+    board = [row[:8] for row in deepcopy(VALID_COMPLETE_BOARD)]
+    with pytest.raises(ValueError):
+        combined_validation(board)
+
+
