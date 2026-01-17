@@ -75,4 +75,25 @@ def combined_validation(board: list[list[int]]) -> bool:
             if cell < 0 or cell > 9:
                 raise ValueError(f"cell ({i},{j}) must be in range 0-9")
 
-    
+    # Check rows
+    for row in board:
+        seen = set()
+        for v in row:
+            if v == 0:
+                continue
+            if v in seen:
+                return False
+            seen.add(v)
+
+    # Check columns
+    for c in range(9):
+        seen = set()
+        for r in range(9):
+            v = board[r][c]
+            if v == 0:
+                continue
+            if v in seen:
+                return False
+            seen.add(v)
+
+  
