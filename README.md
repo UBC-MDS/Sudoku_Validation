@@ -9,10 +9,30 @@ Sudoku_Validation is a project that validates a standard 9 x 9 Sudoku board. It 
 
 This package contains five methods:
 - `combined_validation()`: validates a 9 x 9 Sudoku board is a valid solution
-- `array_validation()`: validates whether any array is a valid 9-integer Sudoku solution with unique integers from 1-9
+- `array_validation()`: validates whether a one-dimensional array represents a valid Sudoku unit (contains 9 integers and each integer is unique and between 1 and 9). Returns True if valid, False otherwise. Other functions in this package use this function as a helper function.
 - `column_validation()`: validates whether the columns of a 9 x 9 Sudoku board is a valid solution
 - `row_validation()`: validates whether the rows of a 9 x 9 Sudoku board is a valid solution
 - `square_validation()`: validates whether the nine 3 x 3 squares of a 9 x 9 Sudoku board is a valid solution
+
+**Input Requirements**
+All validation functions expect a 9 x 9 Sudoku board represented as a list of lists containing integers from 1 to 9. For example:
+
+```python
+sudoku_board = [
+    [5, 3, 4, 6, 7, 8, 9, 1, 2],
+    [6, 7, 2, 1, 9, 5, 3, 4, 8],
+    [1, 9, 8, 3, 4, 2, 5, 6, 7],
+    [8, 5, 9, 7, 6, 1, 4, 2, 3],
+    [4, 2, 6, 8, 5, 3, 7, 9, 1],
+    [7, 1, 3, 9, 2, 4, 8, 5, 6],
+    [9, 6,  1, 5, 3, 7, 2, 8, 4],
+    [2, 8, 7, 4, 1, 9, 6, 3, 5],
+    [3, 4, 5, 2, 8, 6, 1, 7, 9]
+]
+```
+> Note: Invalid shapes or values will raise an exception.
+> Note: All functions are written defensively and will raise informative exceptions
+when invalid input is detected.
 
 There are other Python packages that provide similar functionality. Here are some examples: 
 - `sudoku_py`: https://github.com/aurbano/sudoku_py
@@ -38,8 +58,21 @@ $ pip install sudoku_validation
 To use sudoku_validation in your code:
 
 ```python
->>> import sudoku_validation
->>> sudoku_validation.combined_validation()
+import sudoku_validation
+
+sudoku_board = [
+    [5, 3, 4, 6, 7, 8, 9, 1, 2],
+    [6, 7, 2, 1, 9, 5, 3, 4, 8],
+    [1, 9, 8, 3, 4, 2, 5, 6, 7],
+    [8, 5, 9, 7, 6, 1, 4, 2, 3],
+    [4, 2, 6, 8, 5, 3, 7, 9, 1],
+    [7, 1, 3, 9, 2, 4, 8, 5, 6],
+    [9, 6,  1, 5, 3, 7, 2, 8, 4],
+    [2, 8, 7, 4, 1, 9, 6, 3, 5],
+    [3, 4, 5, 2, 8, 6, 1, 7, 9]
+]
+
+sudoku_validation.combined_validation(sudoku_board)
 ```
 
 ## Copyright
