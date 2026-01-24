@@ -1,0 +1,15 @@
+---
+title: "API Reference"
+---
+
+This section contains API documentation generated from docstrings. 
+
+## Available Functions
+
+- `array_validation` — validate a single 1D unit (row, column, or 3×3 square)
+- `row_validation` — validate all rows of a board
+- `column_validation` — validate all columns of a board
+- `square_validation` — validate all 3×3 squares of a board
+- `combined_validation` — validate a whole 9×9 board
+
+When quartodoc runs during `quarto render`, it will generate dedicated pages for each function with full signatures, parameters, return values, and examples.
