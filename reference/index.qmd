@@ -11,5 +11,3 @@ This section contains API documentation generated from docstrings.
 - `column_validation` — validate all columns of a board
 - `square_validation` — validate all 3×3 squares of a board
 - `combined_validation` — validate a whole 9×9 board
-
-When quartodoc runs during `quarto render`, it will generate dedicated pages for each function with full signatures, parameters, return values, and examples.
