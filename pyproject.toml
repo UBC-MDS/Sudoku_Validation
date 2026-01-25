@@ -139,7 +139,7 @@ detached = true
 # This table installs created the command hatch run install:check which will build and check your package.
 [tool.hatch.envs.build.scripts]
 check = [
-    "python -m build --clean",
+    "python -m build",
     "twine check dist/*",
 ]
 
