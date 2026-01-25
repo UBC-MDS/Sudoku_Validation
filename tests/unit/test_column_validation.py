@@ -42,7 +42,7 @@ def test_column_validation_valid_board_example_2():
     assert column_validation(board_example_1)
 
 
-def test_column_validation_valid_board_example_2():
+def test_column_validation_valid_board_example_3():
     """
     Test column_validation with a valid board (example 3).
     """
