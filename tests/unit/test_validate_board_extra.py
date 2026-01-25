@@ -16,13 +16,13 @@ def test_validate_rows_valid():
         [6,7,8,9,1,2,3,4,5],
         [9,1,2,3,4,5,6,7,8],
     ]
-    assert row_validation(board) is True
+    assert row_validation(board)
 
 def test_validate_rows_duplicate():
     board = [
         [1,1,3,4,5,6,7,8,9],  # duplicate 1
     ] + [[0]*9 for _ in range(8)]
-    assert row_validation(board) is False
+    assert not row_validation(board)
 
 def test_validate_rows_non_numeric():
     board = [
