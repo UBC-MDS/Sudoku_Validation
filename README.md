@@ -40,13 +40,6 @@ There are other Python packages that provide similar functionality. Here are som
 
 Note: this package is a work in progress and might contain example code that is not used in the final product. 
 
-## Contributors
-
-Justin Mak: justinmak08@gmail.com
-Eric Yang: eric99yang@gmail.com
-Kin Chung Choy: kcchoyaa@connect.ust.hk
-Omowunmi Obadero: obaderoomowunmi@gmail.com
-
 ## Get started
 
 You can install this package into your preferred Python environment using pip:
@@ -74,6 +67,89 @@ sudoku_board = [
 
 sudoku_validation.combined_validation(sudoku_board)
 ```
+
+## 📚 Documentation
+
+The full documentation for this package is built using **Quarto** and **Quartodoc** and
+is automatically deployed to **GitHub Pages** via GitHub Actions.
+
+Live documentation:
+https://YOUR-ACTUAL-USERNAME.github.io/sudoku_validation/
+
+The documentation includes:
+- A full API reference generated with Quartodoc
+- Usage examples for all validation functions
+- Developer instructions for building and previewing documentation
+
+
+
+## 👥 For Developers
+
+This section provides instructions for contributors and developers working on
+the Sudoku Validation package.
+
+### Setting Up the Development Environment
+
+#### 1. Clone the repository
+
+```bash
+git clone https://github.com/UBC-MDS/Sudoku_Validation.git
+cd sudoku_validation
+```
+
+#### 2. Create an Environment Using Conda
+
+```bash
+conda env create -f environment.yml
+conda activate sudoku-validation
+```
+
+#### 3. Install the package in Development Mode
+
+```bash
+pip install -e ".[dev]"
+```
+
+#### Running Tests
+
+Execute the full test suite:
+```bash
+pytest 
+``` 
+
+#### Building Documentation
+
+Build documentation locally:
+```bash
+cd docs
+quarto render
+```
+To preview documentation in a browser:
+```bash
+quarto preview
+```
+
+## Continuous Integration and Deployment
+
+All tests, formatting checks and documentation builds are automatically built and deployed using GitHub Actions.
+On every push to the main branch, Quarto renders the documentation and publishes
+it to GitHub Pages.
+No manual deployment steps are required.
+
+
+## Contributing
+
+Please check contributing for guidelines on:
+Reporting bugs
+Suggesting features
+Submitting pull requests
+
+## Contributors
+
+Justin Mak: justinmak08@gmail.com
+Eric Yang: eric99yang@gmail.com
+Kin Chung Choy: kcchoyaa@connect.ust.hk
+Omowunmi Obadero: obaderoomowunmi@gmail.com
 
 ## Copyright
 
