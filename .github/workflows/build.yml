@@ -36,4 +36,5 @@ jobs:
 
       - name: Run style checks
         run: |
+          python -m pip install ruff
           ruff check .
