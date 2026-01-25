@@ -65,6 +65,7 @@ docs = [
 ]
 
 build = [
+    "build",
     "pip-audit",
     "twine",
 ]
@@ -138,7 +139,7 @@ detached = true
 # This table installs created the command hatch run install:check which will build and check your package.
 [tool.hatch.envs.build.scripts]
 check = [
-    "hatch build {args:--clean}",
+    "python -m build --clean",
     "twine check dist/*",
 ]
 
