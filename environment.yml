@@ -1,0 +1,15 @@
+name: sudoku_validation
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.12
+  - numpy
+  - pandas
+  - pytest
+  - quarto
+  - pip
+
+  - pip:
+      - quartodoc
