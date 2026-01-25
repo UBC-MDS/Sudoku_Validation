@@ -21,7 +21,7 @@ def test_column_validation_valid_board_example_1():
         [2, 9, 5, 1, 4, 7, 3, 8, 6],
         [4, 8, 3, 5, 6, 2, 7, 9, 1]
     ]
-    assert column_validation(board_example) == True
+    assert column_validation(board_example)
 
 
 def test_column_validation_valid_board_example_2():
@@ -39,10 +39,10 @@ def test_column_validation_valid_board_example_2():
         [2, 8, 7, 4, 1, 9, 6, 3, 5],
         [3, 4, 5, 2, 8, 6, 1, 7, 9]
     ]
-    assert column_validation(board_example_1) == True
+    assert column_validation(board_example_1)
 
 
-def test_column_validation_valid_board_example_2():
+def test_column_validation_valid_board_example_3():
     """
     Test column_validation with a valid board (example 3).
     """
@@ -57,7 +57,7 @@ def test_column_validation_valid_board_example_2():
         [6, 7, 8, 9, 1, 2, 3, 4, 5],
         [9, 1, 2, 3, 4, 5, 6, 7, 8]
     ]
-    assert column_validation(board_example_2) == True
+    assert column_validation(board_example_2)
 
 
 def test_column_validation_valid_board_example_4():
@@ -75,7 +75,7 @@ def test_column_validation_valid_board_example_4():
         [4, 3, 8, 5, 2, 6, 9, 1, 7],
         [7, 9, 6, 3, 1, 8, 4, 5, 2]
     ]
-    assert column_validation(board_example_3) == True
+    assert column_validation(board_example_3) 
 
 
 def test_column_validation_valid_board_example_5():
@@ -93,7 +93,7 @@ def test_column_validation_valid_board_example_5():
         [5, 7, 9, 2, 4, 6, 8, 1, 3],
         [8, 1, 3, 5, 7, 9, 2, 4, 6]
     ]
-    assert column_validation(board_example_4) == True
+    assert column_validation(board_example_4) 
 
 
 def test_column_validation_valid_board_example_6():
@@ -111,7 +111,7 @@ def test_column_validation_valid_board_example_6():
         [2, 9, 5, 1, 4, 7, 3, 8, 6],
         [4, 8, 3, 5, 6, 2, 7, 9, 1]
     ]
-    assert column_validation(board_example_6) == True
+    assert column_validation(board_example_6) 
 
 
 def test_column_validation_invalid_board_wrong_rows():
@@ -222,7 +222,7 @@ def test_column_validation_invalid_board_duplicate_values_1():
         [6, 7, 8, 9, 1, 2, 3, 4, 5],
         [9, 1, 2, 3, 4, 5, 6, 7, 8]
     ]
-    assert column_validation(invalid_board_duplicate_values) == False
+    assert not column_validation(invalid_board_duplicate_values) 
 
 
 def test_column_validation_invalid_board_duplicate_values_2():
@@ -240,4 +240,4 @@ def test_column_validation_invalid_board_duplicate_values_2():
         [3, 1, 7, 2, 4, 6, 8, 9, 5],
         [6, 4, 2, 5, 9, 8, 1, 7, 3]
     ]
-    assert column_validation(board_example_5) == False
+    assert not column_validation(board_example_5)

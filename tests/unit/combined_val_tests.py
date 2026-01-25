@@ -78,7 +78,7 @@ def test_row_duplicate_returns_false():
     board = deepcopy(VALID_COMPLETE_BOARD)
     board[0][0] = 5
     board[0][1] = 5  
-    assert combined_validation(board) is False
+    assert not combined_validation(board)
 
 
 def test_column_duplicate_returns_false():
@@ -86,7 +86,7 @@ def test_column_duplicate_returns_false():
     board = deepcopy(VALID_COMPLETE_BOARD)
     board[0][0] = 7
     board[1][0] = 7  
-    assert combined_validation(board) is False
+    assert not combined_validation(board)
 
 
 def test_block_duplicate_returns_false():
@@ -94,14 +94,14 @@ def test_block_duplicate_returns_false():
     board = deepcopy(VALID_COMPLETE_BOARD)
     board[0][0] = 9
     board[1][1] = 9  
-    assert combined_validation(board) is False
+    assert not combined_validation(board)
 
 
 def test_valid_complete_board_returns_true():
     """Return True for a valid, complete Sudoku board."""
-    assert combined_validation(VALID_COMPLETE_BOARD) is True
+    assert combined_validation(VALID_COMPLETE_BOARD)
 
 
 def test_valid_incomplete_board_returns_true():
     """Return True for a valid, incomplete board."""
-    assert combined_validation(VALID_INCOMPLETE_BOARD) is True
+    assert combined_validation(VALID_INCOMPLETE_BOARD)

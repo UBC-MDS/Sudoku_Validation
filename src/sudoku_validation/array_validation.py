@@ -54,7 +54,7 @@ def array_validation(unit):
     """
     # Basic input validation
     if not isinstance(unit, list):
-        raise TypeError("Input array must not be a list.")
+        raise TypeError("Input array must be a list.")
     if len(unit) != 9:
         raise ValueError("Input array must be of length 9.")
     if not all(isinstance(x, int) for x in unit):

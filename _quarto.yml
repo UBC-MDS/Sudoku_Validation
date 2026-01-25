@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: _build
+
+website:
+  title: "Sudoku Validation"
+  description: "Comprehensive Sudoku puzzle validation package"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: reference/index.qmd
+        text: API Reference
+
+quartodoc:
+  title: API Reference
+  style: pkgdown
+  dir: reference
+  package: sudoku_validation
+  sections:
+    - title: Validation Functions
+      desc: Core validation functions for Sudoku puzzles
+      contents:
+        - array_validation
+        - row_validation
+        - column_validation
+        - square_validation
+        - combined_validation
