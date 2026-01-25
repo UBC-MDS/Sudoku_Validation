@@ -1,4 +1,4 @@
-name: Build and Test
+name: build
 # Run the test suite and style checkers on pull requests and pushes to main branch
 on:
   pull_request:
