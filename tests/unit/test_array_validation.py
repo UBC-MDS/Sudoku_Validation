@@ -3,11 +3,11 @@ from sudoku_validation.array_validation import array_validation
 
 def test_valid_array():
     valid_unit = [5, 3, 4, 6, 7, 8, 9, 1, 2]
-    assert array_validation(valid_unit) == True
+    assert array_validation(valid_unit)
 
 def test_invalid_array_duplicates():
     invalid_unit = [5, 3, 4, 6, 7, 8, 9, 1, 5]
-    assert array_validation(invalid_unit) == False
+    assert not array_validation(invalid_unit)
 
 def test_invalid_array_length():
     invalid_unit = [5, 3, 4, 6, 7, 8, 9, 1]

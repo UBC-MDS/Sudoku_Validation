@@ -21,7 +21,7 @@ def test_row_validation_valid(valid_board):
     Rubric: Test the 'True' branch.
     Verifies that a fully valid board returns True.
     """
-    assert row_validation(valid_board) is True
+    assert row_validation(valid_board)
 
 def test_row_validation_duplicates(valid_board):
     """
@@ -32,7 +32,7 @@ def test_row_validation_duplicates(valid_board):
     invalid_board = [row[:] for row in valid_board]
     invalid_board[0] = [5, 5, 4, 6, 7, 8, 9, 1, 2]
     
-    assert row_validation(invalid_board) is False
+    assert not row_validation(invalid_board)
 
 @pytest.mark.parametrize("invalid_input", [
     "not_a_list", # Edge Case 1: String input
