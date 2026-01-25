@@ -75,7 +75,7 @@ The full documentation for this package is built using **Quarto** and **Quartodo
 is automatically deployed to **GitHub Pages** via GitHub Actions.
 
 Live documentation:
-https://YOUR-ACTUAL-USERNAME.github.io/sudoku_validation/
+[https://ubc-mds.github.io/Sudoku_Validation/](https://ubc-mds.github.io/Sudoku_Validation/)
 
 The documentation includes:
 - A full API reference generated with Quartodoc
