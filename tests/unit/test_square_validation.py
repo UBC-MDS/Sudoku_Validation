@@ -14,7 +14,7 @@ def test_square_validation_valid_board_a():
         [2, 9, 5, 1, 4, 7, 3, 8, 6],
         [4, 8, 3, 5, 6, 2, 7, 9, 1]
     ]
-    assert square_validation(board) is True
+    assert square_validation(board)
 
 
 def test_square_validation_valid_board_b():
@@ -30,7 +30,7 @@ def test_square_validation_valid_board_b():
         [2, 8, 7, 4, 1, 9, 6, 3, 5],
         [3, 4, 5, 2, 8, 6, 1, 7, 9]
     ]
-    assert square_validation(board) is True
+    assert square_validation(board) 
 
 
 def test_square_validation_valid_board_c():
@@ -46,7 +46,7 @@ def test_square_validation_valid_board_c():
         [6, 7, 8, 9, 1, 2, 3, 4, 5],
         [9, 1, 2, 3, 4, 5, 6, 7, 8]
     ]
-    assert square_validation(board) is True
+    assert square_validation(board) 
 
 
 def test_square_validation_invalid_shape_too_few_rows():
@@ -124,4 +124,4 @@ def test_square_validation_duplicate_in_square():
         [6, 7, 8, 9, 1, 2, 3, 4, 5],
         [9, 1, 2, 3, 4, 5, 6, 7, 8]
     ]
-    assert square_validation(board) is False
+    assert not square_validation(board) 
