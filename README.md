@@ -31,6 +31,7 @@ sudoku_board = [
 ]
 ```
 > Note: Invalid shapes or values will raise an exception.
+> 
 > Note: All functions are written defensively and will raise informative exceptions
 when invalid input is detected.
 
@@ -38,7 +39,7 @@ There are other Python packages that provide similar functionality. Here are som
 - `sudoku_py`: https://github.com/aurbano/sudoku_py
 - `CodeWars-Python`: https://github.com/Peter-Liang/CodeWars-Python/blob/master/solutions/Validate_Sudoku_with_size_NxN.py
 
-Note: this package is a work in progress and might contain example code that is not used in the final product. 
+> Note: this package is a work in progress and might contain example code that is not used in the final product. 
 
 ## Contributors
 
