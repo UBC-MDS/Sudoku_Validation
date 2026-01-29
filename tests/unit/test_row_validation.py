@@ -28,7 +28,7 @@ def test_row_validation_duplicates(valid_board):
     Rubric: Test the 'False' branch.
     Verifies that a row with duplicates returns False.
     """
-    # Create a board with a duplicate '5' in the first row
+    # Create a board with a duplicate '5' in the first row at column 0 and 1
     invalid_board = [row[:] for row in valid_board]
     invalid_board[0] = [5, 5, 4, 6, 7, 8, 9, 1, 2]
     
@@ -56,10 +56,10 @@ def test_row_validation_invalid_dimensions(valid_board):
         row_validation(short_board)
 
 @pytest.mark.parametrize("bad_row", [
-    [5, 3, 4, 6, 7, 8, 9, 1, 0], # Edge Case 5: Contains 0
-    [5, 3, 4, 6, 7, 8, 9, 1, 10], # Edge Case 6: Out of range
-    [5, 3, 4, 6, 7, 8, 9, 1, None], # Edge Case 7: Contains None
-    [5, 3, 4, 6, 7, 8, 9, 1, "X"], # Edge Case 8: Contains String
+    [5, 3, 4, 6, 7, 8, 9, 1, 0], # Edge Case 5: Contains 0 at last index
+    [5, 3, 4, 6, 7, 8, 9, 1, 10], # Edge Case 6: Out of range at last index
+    [5, 3, 4, 6, 7, 8, 9, 1, None], # Edge Case 7: Contains None at last index
+    [5, 3, 4, 6, 7, 8, 9, 1, "X"], # Edge Case 8: Contains String at last index
 ])
 def test_row_validation_invalid_content(valid_board, bad_row):
     """
