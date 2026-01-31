@@ -104,3 +104,5 @@ Before you submit a pull request, check that it meets these guidelines:
    new functionality into a function with a docstring.
 3. Your pull request will automatically be checked by the full test suite.
    It needs to pass all of them before it can be considered for merging.
+### Discuss the use of development tools, GitHub infrastructure, and organizational practices you learned in this course and applied in your project. If you were to scale up your or another project, what tools, infrastructure and practices would you use and why?
+We picked up a lot of practical habits in this course, especially around using GitHub to keep our work organized and accountable. Issues and pull requests are our main way of breaking tasks down and making sure we know who is doing what. Automated tests and CI helped us catch mistakes early instead of deadline fighting. If this project grew bigger, I will probably want to improve on better use of github issues for planning so the team could stay coordinated. I will also invest more in documentation and code reviews because they make scaling a lot less chaotic and more developer friendly.
