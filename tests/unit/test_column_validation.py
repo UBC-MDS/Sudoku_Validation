@@ -152,7 +152,7 @@ def test_column_validation_invalid_board_wrong_columns():
 
 def test_column_validation_invalid_board_invalid_value_zero():
     """
-    Test column_validation with board containing invalid value (0 is outside 1-9 range).
+    Test column_validation with board containing invalid value at row 0, column 0 (0 is outside 1-9 range).
     """
     invalid_board_invalid_value = [
         [0, 2, 3, 4, 5, 6, 7, 8, 9],
@@ -171,7 +171,7 @@ def test_column_validation_invalid_board_invalid_value_zero():
 
 def test_column_validation_invalid_board_invalid_value_ten():
     """
-    Test column_validation with board containing invalid value (10 is outside 1-9 range).
+    Test column_validation with board containing invalid value at row 0, column 8 (10 is outside 1-9 range).
     """
     invalid_board_invalid_value_2 = [
         [1, 2, 3, 4, 5, 6, 7, 8, 10],
@@ -190,7 +190,7 @@ def test_column_validation_invalid_board_invalid_value_ten():
 
 def test_column_validation_invalid_board_negative_values():
     """
-    Test column_validation with board containing negative values.
+    Test column_validation with board containing negative values at row 0, column 0 (-1 is outside 1-9 range).
     """
     invalid_board_negative_values = [
         [-1, 2, 3, 4, 5, 6, 7, 8, 9],
@@ -209,7 +209,7 @@ def test_column_validation_invalid_board_negative_values():
 
 def test_column_validation_invalid_board_duplicate_values_1():
     """
-    Test column_validation with board containing duplicate values (example 1).
+    Test column_validation with board containing duplicate values at row 0, column 0 and row 1, column 0 (1 is duplicated).
     """
     invalid_board_duplicate_values = [
         [1, 2, 3, 4, 4, 6, 7, 8, 9],
@@ -227,7 +227,7 @@ def test_column_validation_invalid_board_duplicate_values_1():
 
 def test_column_validation_invalid_board_duplicate_values_2():
     """
-    Test column_validation with board containing duplicate values (example 2).
+    Test column_validation with board containing duplicate values at row 0, column 4 and row 1, column 0 (1 is duplicated).
     """
     board_example_5 = [
         [9, 6, 3, 1, 7, 4, 2, 5, 8],

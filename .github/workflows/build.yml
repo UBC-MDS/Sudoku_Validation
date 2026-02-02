@@ -31,7 +31,15 @@ jobs:
           pip install -e ".[tests]"
       - name: Run tests
         run: |
-          pytest --cov=sudoku_validation --cov-report=term --cov-branch
+          pytest --cov=sudoku_validation --cov-report=term --cov-report=xml --cov-branch
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: ./coverage.xml
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true
+
       - name: Run style checks
         run: |
           python -m pip install ruff
