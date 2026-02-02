@@ -1,4 +1,17 @@
 # Welcome to Sudoku_Validation
+[Sudoku_Validation](https://github.com/UBC-MDS/Sudoku_Validation) is a Python package designed to validate standard 9x9 Sudoku boards. It provides robust, defensive functions to check the validity of rows, columns, 3x3 squares, and the entire board, ensuring that each unit contains unique integers from 1 to 9. The package is suitable for both end-users and developers who need reliable Sudoku validation in their applications or data pipelines.
+
+## Package Contents
+
+- **combined_validation(board)**: Validates whether a 9x9 Sudoku board is a complete and correct solution, checking all rows, columns, and 3x3 squares.
+- **array_validation(arr)**: Checks if a one-dimensional array represents a valid Sudoku unit (9 unique integers between 1 and 9). Used as a helper in other functions.
+- **column_validation(board)**: Validates that each column in a 9x9 Sudoku board contains all digits from 1 to 9 exactly once.
+- **row_validation(board)**: Validates that each row in a 9x9 Sudoku board contains all digits from 1 to 9 exactly once.
+- **square_validation(board)**: Validates that each 3x3 square in a 9x9 Sudoku board contains all digits from 1 to 9 exactly once.
+
+## Position in the Python Ecosystem
+
+Sudoku_Validation fits into the Python ecosystem as a specialized utility for Sudoku board validation. While there are other Python packages with similar functionality, such as [sudoku_py](https://github.com/aurbano/sudoku_py) and [CodeWars-Python's Validate_Sudoku_with_size_NxN](https://github.com/Peter-Liang/CodeWars-Python/blob/master/solutions/Validate_Sudoku_with_size_NxN.py), this package emphasizes defensive programming and informative error handling. If you need a focused, well-documented, and reliable Sudoku validation tool, Sudoku_Validation is a strong choice among available Python solutions.
 
 |        |        |
 |--------|--------|
@@ -8,10 +21,15 @@
 Sudoku_Validation is a project that validates a standard 9 x 9 Sudoku board. It has the ability to validate rows only, columns only, 3x3 squares only, or the entire 9 x 9 board. 
 
 This package contains five methods:
+
 - `combined_validation()`: validates a 9 x 9 Sudoku board is a valid solution
+
 - `array_validation()`: validates whether a one-dimensional array represents a valid Sudoku unit (contains 9 integers and each integer is unique and between 1 and 9). Returns True if valid, False otherwise. Other functions in this package use this function as a helper function.
+
 - `column_validation()`: validates whether the columns of a 9 x 9 Sudoku board is a valid solution
+
 - `row_validation()`: validates whether the rows of a 9 x 9 Sudoku board is a valid solution
+
 - `square_validation()`: validates whether the nine 3 x 3 squares of a 9 x 9 Sudoku board is a valid solution
 
 **Input Requirements**
@@ -69,7 +87,7 @@ sudoku_board = [
 sudoku_validation.combined_validation(sudoku_board)
 ```
 
-## 📚 Documentation
+## Documentation
 
 The full documentation for this package is built using **Quarto** and **Quartodoc** and
 is automatically deployed to **GitHub Pages** via GitHub Actions.
@@ -84,7 +102,7 @@ The documentation includes:
 
 
 
-## 👥 For Developers
+## For Developers
 
 This section provides instructions for contributors and developers working on
 the Sudoku Validation package.
@@ -148,8 +166,11 @@ Submitting pull requests
 ## Contributors
 
 Justin Mak: justinmak08@gmail.com
+
 Eric Yang: eric99yang@gmail.com
+
 Kin Chung Choy: kcchoyaa@connect.ust.hk
+
 Omowunmi Obadero: obaderoomowunmi@gmail.com
 
 ## Copyright

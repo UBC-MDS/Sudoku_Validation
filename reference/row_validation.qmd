@@ -1,0 +1,46 @@
+# row_validation { #sudoku_validation.row_validation }
+
+`row_validation`
+
+Row-level validation utilities for Sudoku boards.
+
+This module provides functionality for validating individual rows of a
+Sudoku board. Row validation is performed by extracting a single row from
+the board and delegating Sudoku rule checks to the generic array validation
+functions.
+
+## Functions
+
+| Name | Description |
+| --- | --- |
+| [row_validation](#sudoku_validation.row_validation.row_validation) | Validate all rows of a Sudoku board. |
+
+### row_validation { #sudoku_validation.row_validation.row_validation }
+
+```python
+row_validation.row_validation(board)
+```
+
+Validate all rows of a Sudoku board.
+
+This function iterates through every row in the provided board and
+validates it according to Sudoku rules by delegating to the 
+validate_array_unit function.
+
+#### Parameters {.doc-section .doc-section-parameters}
+
+| Name   | Type          | Description                                                                                | Default    |
+|--------|---------------|--------------------------------------------------------------------------------------------|------------|
+| board  | list of lists | A two-dimensional list representing a 9x9 Sudoku board. Must contain integers from 1 to 9. | _required_ |
+
+#### Returns {.doc-section .doc-section-returns}
+
+| Name   | Type   | Description                                                                                          |
+|--------|--------|------------------------------------------------------------------------------------------------------|
+|        | bool   | True if ALL rows are valid Sudoku units (no duplicates). False if ANY row contains duplicate values. |
+
+#### Raises {.doc-section .doc-section-raises}
+
+| Name   | Type       | Description                                                                                                                   |
+|--------|------------|-------------------------------------------------------------------------------------------------------------------------------|
+|        | ValueError | If the board is not a list, is not of length 9, contains rows of invalid length, or contains non-integer values/placeholders. |

@@ -1,13 +1,13 @@
----
-title: "API Reference"
----
+# API Reference {.doc .doc-index}
 
-This section contains API documentation generated from docstrings. 
+## Validation Functions
 
-## Available Functions
+Core validation functions for Sudoku puzzles
 
-- `array_validation` — validate a single 1D unit (row, column, or 3×3 square)
-- `row_validation` — validate all rows of a board
-- `column_validation` — validate all columns of a board
-- `square_validation` — validate all 3×3 squares of a board
-- `combined_validation` — validate a whole 9×9 board
+| | |
+| --- | --- |
+| [array_validation](array_validation.qmd#sudoku_validation.array_validation) | Core validation utilities for Sudoku array units. |
+| [row_validation](row_validation.qmd#sudoku_validation.row_validation) | Row-level validation utilities for Sudoku boards. |
+| [column_validation](column_validation.qmd#sudoku_validation.column_validation) | Column-level validation utilities for Sudoku boards. |
+| [square_validation](square_validation.qmd#sudoku_validation.square_validation) | Square-level validation utilities for Sudoku boards. |
+| [combined_validation](combined_validation.qmd#sudoku_validation.combined_validation) | Combined validation utilities for Sudoku boards.|
