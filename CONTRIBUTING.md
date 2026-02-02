@@ -7,15 +7,19 @@ Every little bit helps, and credit will always be given.
 
 You can contribute in many ways, for example:
 
-* [Report bugs](#report-bugs)
-* [Fix Bugs](#fix-bugs)
-* [Implement Features](#implement-features)
-* [Write Documentation](#write-documentation)
-* [Submit Feedback](#submit-feedback)
+- [Contributing](#contributing)
+  - [Example Contributions](#example-contributions)
+    - [Report Bugs](#report-bugs)
+    - [Fix Bugs](#fix-bugs)
+    - [Implement Features](#implement-features)
+    - [Write Documentation](#write-documentation)
+    - [Submit Feedback](#submit-feedback)
+  - [Get Started!](#get-started)
+    - [Pull Request Guidelines](#pull-request-guidelines)
 
 ### Report Bugs
 
-Report bugs at https://github.com/justinmak08, EricYangg, Maple018, Olytics/sudoku_validation/issues.
+Report bugs at <https://github.com/UBC-MDS/Sudoku_Validation/issues>.
 
 **If you are reporting a bug, please follow the template guidelines. The more
 detailed your report, the easier and thus faster we can help you.**
@@ -42,13 +46,13 @@ happy for any support that they can get.
 Sudoku_Validation could always use more documentation, whether as
 part of the official documentation, in docstrings, or even on the web in blog
 posts, articles, and such. Just
-[open an issue](https://github.com/justinmak08, EricYangg, Maple018, Olytics/sudoku_validation/issues)
+[open an issue](https://github.com/UBC-MDS/Sudoku_Validation/issues)
 to let us know what you will be working on so that we can provide you with guidance.
 
 ### Submit Feedback
 
 The best way to send feedback is to file an issue at
-https://github.com/justinmak08, EricYangg, Maple018, Olytics/sudoku_validation/issues. If your feedback fits the format of one of
+<https://github.com/UBC-MDS/Sudoku_Validation/issues>. If your feedback fits the format of one of
 the issue templates, please use that. Remember that this is a volunteer-driven
 project and everybody has limited time.
 
@@ -57,12 +61,12 @@ project and everybody has limited time.
 Ready to contribute? Here's how to set up Sudoku_Validation for
 local development.
 
-1. Fork the https://github.com/justinmak08, EricYangg, Maple018, Olytics/sudoku_validation
+1. Fork the <https://github.com/UBC-MDS/Sudoku_Validation>
    repository on GitHub.
 2. Clone your fork locally (*if you want to work locally*)
 
     ```shell
-    git clone git@github.com:your_name_here/sudoku_validation.git
+    git clone https://github.com/UBC-MDS/Sudoku_Validation.git
     ```
 
 3. [Install hatch](https://hatch.pypa.io/latest/install/).
