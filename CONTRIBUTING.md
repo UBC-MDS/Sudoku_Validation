@@ -57,7 +57,7 @@ project and everybody has limited time.
 Ready to contribute? Here's how to set up Sudoku_Validation for
 local development.
 
-1. Fork the [repository] (https://github.com/justinmak08) on GitHub.
+1. Fork the [repository] (https://github.com/UBC-MDS/Sudoku_Validation) on GitHub.
 2. Clone your fork locally (*if you want to work locally*)
 
     ```shell
