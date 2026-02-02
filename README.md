@@ -95,14 +95,14 @@ the Sudoku Validation package.
 
 ```bash
 git clone https://github.com/UBC-MDS/Sudoku_Validation.git
-cd sudoku_validation
+cd Sudoku_Validation
 ```
 
 #### 2. Create an Environment Using Conda
 
 ```bash
 conda env create -f environment.yml
-conda activate sudoku-validation
+conda activate sudoku_validation
 ```
 
 #### 3. Install the package in Development Mode
