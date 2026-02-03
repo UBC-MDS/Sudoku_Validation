@@ -39,10 +39,10 @@ keywords = []
 dependencies = []
 
 [project.urls]
-Homepage = "https://github.com/justinmak08, EricYangg, Maple018, Olytics/sudoku_validation"
-"Source Code" = "https://github.com/justinmak08, EricYangg, Maple018, Olytics/sudoku_validation"
-"Bug Tracker" = "https://github.com/justinmak08, EricYangg, Maple018, Olytics/sudoku_validation/issues"
-Documentation = "https://github.com/justinmak08, EricYangg, Maple018, Olytics/sudoku_validation/blob/main/README.md"
+Homepage = "https://ubc-mds.github.io/Sudoku_Validation/"
+"Source Code" = "https://github.com/UBC-MDS/Sudoku_Validation"
+"Bug Tracker" = "https://github.com/UBC-MDS/Sudoku_Validation/issues"
+Documentation = "https://ubc-mds.github.io/Sudoku_Validation/"
 Download = "https://pypi.org/project/sudoku_validation/#files"
 
 [project.optional-dependencies]
@@ -62,6 +62,10 @@ docs = [
     "sphinx-autoapi>=3.6.0",
     "sphinx_design>=0.6.1",
     "sphinx-copybutton>=0.5.2",
+    "quartodoc",
+    "jupyter",
+    "nbformat",
+    "ipykernel",
 ]
 
 build = [
