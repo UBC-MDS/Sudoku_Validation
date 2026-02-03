@@ -14,10 +14,9 @@
 
 Sudoku_Validation fits into the Python ecosystem as a specialized utility for Sudoku board validation. While there are other Python packages with similar functionality, such as [sudoku_py](https://github.com/aurbano/sudoku_py) and [CodeWars-Python's Validate_Sudoku_with_size_NxN](https://github.com/Peter-Liang/CodeWars-Python/blob/master/solutions/Validate_Sudoku_with_size_NxN.py), this package emphasizes defensive programming and informative error handling. If you need a focused, well-documented, and reliable Sudoku validation tool, Sudoku_Validation is a strong choice among available Python solutions.
 
-|        |        |
-|--------|--------|
-| Package | [![Latest PyPI Version](https://img.shields.io/pypi/v/sudoku_validation.svg)](https://pypi.org/project/sudoku_validation/) [![Supported Python Versions](https://img.shields.io/pypi/pyversions/sudoku_validation.svg)](https://pypi.org/project/sudoku_validation/)  [![codecov](https://codecov.io/github/UBC-MDS/Sudoku_Validation/graph/badge.svg?token=Hk51HZyYd4)](https://codecov.io/github/UBC-MDS/Sudoku_Validation)|
-| Meta   | [![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md) |
+| Package | [![Test PyPI Version](https://img.shields.io/pypi/v/sudoku_validation?pypiBaseUrl=https://test.pypi.org)](https://test.pypi.org/project/sudoku-validation/) [![Supported Python Versions](https://img.shields.io/pypi/pyversions/sudoku_validation?pypiBaseUrl=https://test.pypi.org)](https://test.pypi.org/project/sudoku-validation/) [![codecov](https://codecov.io/github/UBC-MDS/Sudoku_Validation/graph/badge.svg?token=Hk51HZyYd4)](https://codecov.io/github/UBC-MDS/Sudoku_Validation) |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Meta    | [![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)                                                                                                                                                                                                                                                                                                                                                                          |
 
 [Sudoku_Validation](https://github.com/UBC-MDS/Sudoku_Validation) is a project that validates a standard 9 x 9 Sudoku board. It has the ability to validate rows only, columns only, 3x3 squares only, or the entire 9 x 9 board. 
 
@@ -62,10 +61,10 @@ There are other Python packages that provide similar functionality. Here are som
 
 ## Get started 
 
-You can install this package into your preferred Python environment using pip:
+You can install this package into your preferred Python environment using pip. The package is published on [Test PyPI](https://test.pypi.org/project/sudoku-validation/):
 
 ```bash
-$ pip install sudoku_validation
+$ pip install -i https://test.pypi.org/simple/ sudoku-validation
 ```
 
 To use sudoku_validation in your code:
