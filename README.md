@@ -2,7 +2,7 @@
 [Sudoku_Validation](https://github.com/UBC-MDS/Sudoku_Validation) is a Python package designed to validate standard 9x9 Sudoku boards. It provides robust, defensive functions to check the validity of rows, columns, 3x3 squares, and the entire board, ensuring that each unit contains unique integers from 1 to 9. The package is suitable for both end-users and developers who need reliable Sudoku validation in their applications or data pipelines.
 
 
-## Package Contents {#package-contents}
+## Package Contents 
 
 - **combined_validation(board)**: Validates whether a 9x9 Sudoku board is a complete and correct solution, checking all rows, columns, and 3x3 squares.
 - **array_validation(arr)**: Checks if a one-dimensional array represents a valid Sudoku unit (9 unique integers between 1 and 9). Used as a helper in other functions.
@@ -10,7 +10,7 @@
 - **row_validation(board)**: Validates that each row in a 9x9 Sudoku board contains all digits from 1 to 9 exactly once.
 - **square_validation(board)**: Validates that each 3x3 square in a 9x9 Sudoku board contains all digits from 1 to 9 exactly once.
 
-## Position in the Python Ecosystem {#position-in-the-python-ecosystem}
+## Position in the Python Ecosystem 
 
 Sudoku_Validation fits into the Python ecosystem as a specialized utility for Sudoku board validation. While there are other Python packages with similar functionality, such as [sudoku_py](https://github.com/aurbano/sudoku_py) and [CodeWars-Python's Validate_Sudoku_with_size_NxN](https://github.com/Peter-Liang/CodeWars-Python/blob/master/solutions/Validate_Sudoku_with_size_NxN.py), this package emphasizes defensive programming and informative error handling. If you need a focused, well-documented, and reliable Sudoku validation tool, Sudoku_Validation is a strong choice among available Python solutions.
 
@@ -60,7 +60,7 @@ There are other Python packages that provide similar functionality. Here are som
 
 > Note: this package is a work in progress and might contain example code that is not used in the final product. 
 
-## Get started {#get-started}
+## Get started 
 
 You can install this package into your preferred Python environment using pip:
 
@@ -142,7 +142,7 @@ print('combined_validation (complete board):', combined_validation(complete))
 print('combined_validation (incomplete but valid):', combined_validation(incomplete))
 ```
 
-## Documentation {#documentation}
+## Documentation 
 
 The full documentation for this package is built using **Quarto** and **Quartodoc** and
 is automatically deployed to **GitHub Pages** via GitHub Actions.
@@ -157,7 +157,7 @@ The documentation includes:
 
 
 
-## For Developers {#for-developers}
+## For Developers 
 
 This section provides instructions for contributors and developers working on
 the Sudoku Validation package.
@@ -211,14 +211,14 @@ it to GitHub Pages.
 No manual deployment steps are required.
 
 
-## Contributing {#contributing}
+## Contributing 
 
 Please check contributing for guidelines on:
 Reporting bugs
 Suggesting features
 Submitting pull requests
 
-## Contributors {#contributors}
+## Contributors 
 
 Justin Mak: justinmak08@gmail.com
 
@@ -228,7 +228,7 @@ Kin Chung Choy: kcchoyaa@connect.ust.hk
 
 Omowunmi Obadero: obaderoomowunmi@gmail.com
 
-## Copyright {#copyright}
+## Copyright 
 
 - Copyright © 2026 Justin Mak, Eric Yang, Kin Chung Choy, Omowunmi Obadero.
 - Free software distributed under the [MIT License](./LICENSE).
