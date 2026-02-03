@@ -39,3 +39,4 @@ jobs:
           verbose: true
           repository-url: https://test.pypi.org/legacy/
           password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          skip-existing: true
