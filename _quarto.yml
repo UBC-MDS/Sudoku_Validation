@@ -11,6 +11,26 @@ website:
         text: Home
       - href: reference/index.qmd
         text: API Reference
+      - href: tutorials/usage.qmd
+        text: Tutorial
+  sidebar:
+    left:
+      - href: index.qmd#package-contents
+        text: Package Contents
+      - href: index.qmd#position-in-the-python-ecosystem
+        text: Ecosystem
+      - href: index.qmd#get-started
+        text: Get Started
+      - href: index.qmd#documentation
+        text: Documentation
+      - href: index.qmd#for-developers
+        text: For Developers
+      - href: index.qmd#contributing
+        text: Contributing
+      - href: index.qmd#contributors
+        text: Contributors
+      - href: index.qmd#copyright
+        text: Copyright
 
 quartodoc:
   title: API Reference
