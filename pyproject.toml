@@ -13,7 +13,7 @@ requires = ["hatchling"]
 [project]
 name = "sudoku_validation"
 # You can chose to use dynamic versioning with hatch or static where you add it manually.
-version = "0.1.0"
+version = "3.0.0"
 
 description = "Validate sudoku puzzle"
 authors = [
