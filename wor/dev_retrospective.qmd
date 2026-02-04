@@ -1,0 +1,60 @@
+---
+title: "Work Organization and Retrospective"
+format: html
+---
+
+**Project Management Summary**
+
+Our team organized the Sudoku validation project using GitHub’s core collaboration tools, such as issues, PRs and views.
+
+**Issues, Milestones, and Project Board**
+
+All work in the repo began as an issue, such as features, bugs, and design decisions. Each issue was assigned to one of the team members, which kept responsibilities clear.\
+
+Our Project Board (Backlog → Ready → In Progress → In Review → Done) gave us a simple visual overview of task flow and workload. We also have views for individual performance and team performance. We found that stating clearly the assignee really helps us in organizing tasks for our team fairly.
+
+**Analytics‑Driven Reflection**
+
+GitHub Project analytics gave us a realistic picture of our workflow:
+
+-   **Burn‑up:** Milestone 2 had the most completed issues
+
+-   **Team Workload:** Contributions were balanced across members, with differences explained by task complexity vs quantity.
+
+    -   Eric: 10
+
+    -   Justin: 9
+
+    -   Omo: 9
+
+    -   Kin Chung: 8
+
+        \![Workload by team member\](/images/contributions.png)
+
+**Development Practices**
+
+-   **Git Flow:** A dedicated development branch improved code quality.
+
+-   **CI/CD:** GitHub Actions automated testing, documentation builds, and Netlify previews.
+
+-   **Documentation:** quartodoc + Quarto, with PR previews for fast feedback.
+
+-   **Code Reviews:** Required for every PR, strengthening shared understanding.
+
+-   **Communication:** Using GitHub issues PRs and slack.
+
+-   **Scaling Up:** We suggest enhancing our issue template and hcangelogs if we are to scale up our project.
+
+**DAKI Retrospective**
+
+-   **Drop:** Creating issues without assigning a teammate or labeling it for a milestone
+
+-   **Add:** We can conciser adding issue templates
+
+-   **Keep:** Project board analytics and PR documentation previews.
+
+-   **Improve:** More cross‑reviewing to ensure code robustness.
+
+**Final Reflections**
+
+Clear issue descriptions, continuous documentation previews, and fair workload management helped us maintain quality and fair distribution of work throughout the project. Our structured use of GitHub in the Sudoku_Validation repo kept the team aligned and the development process transparent.
