@@ -15,13 +15,13 @@ jobs:
 
     steps:
       - name: Check-out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.ref }}  # Add this line - checks out the exact tag
           fetch-depth: 0  # Important: need full history for version detection
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v7
         with:
           python-version: '3.13'
 
